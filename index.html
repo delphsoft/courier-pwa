@@ -3,34 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Courier Córdoba</title>
+  <title>Courier Córdoba - Repartidor</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="icons/icon-192.png">
 </head>
 <body>
   <header>
-    <h1>🚀 Courier Córdoba</h1>
-    <p id="repartidor">Repartidor: Juan Pérez</p>
+    <div class="header-content">
+      <h1>🚀 Courier Córdoba</h1>
+      <div class="user-info">
+        <span id="repartidor-name">Juan Pérez</span>
+        <span class="status online">● En línea</span>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="map-container">
-      <h2>📍 Mapa en Vivo</h2>
-      <div id="map" style="height: 320px; width: 100%; border-radius: 12px;"></div>
-    </section>
+    <!-- Mapa -->
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
 
-    <section class="pedidos">
-      <h2>📦 Pedidos Asignados</h2>
-      <ul id="lista-pedidos"></ul>
-    </section>
+    <!-- Lista de Pedidos -->
+    <div class="pedidos-container">
+      <h2>Mis Pedidos <span id="pedidos-count">(0)</span></h2>
+      <div id="lista-pedidos"></div>
+    </div>
 
-    <button id="btn-ubicacion">📍 Actualizar mi ubicación</button>
-    <button id="btn-foto">📸 Marcar como Entregado + Foto</button>
+    <!-- Acciones rápidas -->
+    <div class="actions">
+      <button id="btn-ubicacion">📍 Actualizar Ubicación</button>
+      <button id="btn-simular">▶️ Simular Movimiento</button>
+    </div>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="app.js"></script>
 </body>
 </html>
