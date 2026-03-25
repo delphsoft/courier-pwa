@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courier Córdoba</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icons/icon-192.png">
+</head>
+<body>
+  <header>
+    <h1>🚀 Courier Córdoba</h1>
+    <p id="repartidor">Repartidor: Juan Pérez</p>
+  </header>
+
+  <main>
+    <section class="map-container">
+      <h2>📍 Mapa en Vivo</h2>
+      <div id="map" style="height: 320px; width: 100%; border-radius: 12px;"></div>
+    </section>
+
+    <section class="pedidos">
+      <h2>📦 Pedidos Asignados</h2>
+      <ul id="lista-pedidos"></ul>
+    </section>
+
+    <button id="btn-ubicacion">📍 Actualizar mi ubicación</button>
+    <button id="btn-foto">📸 Marcar como Entregado + Foto</button>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="app.js"></script>
+</body>
+</html>
